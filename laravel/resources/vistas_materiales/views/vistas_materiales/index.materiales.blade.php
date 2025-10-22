@@ -1,9 +1,10 @@
-@extends('layouts.app')
-@section ('content')
-<h1> Listado de materiales </h1>
+@extends('master_materiales')
+@section ('titulo', 'Listado de Materiales')
+@section ('contenido)
 
-<table>
-<thead>
+<h2 class="mb-4">Listado de Materiales</h2>
+<table class="table table-bordered table-hover">
+<thead class="table-dark">
     <tr>
         <th>ID</th>
         <th>Nombre</th>
@@ -22,7 +23,7 @@
         <td>{{$material -> precio}}</td>
         <td>{{$material -> stock}}</td>
         <td>
-            <a href="{{ url'/vistas_materiales/'.$material ->id}}">Ver detalle</a>
+            <a href="{{ url'/vistas_materiales/'.$material ->id }}" class="btn btn-info btn-s">Ver</a>
         </td>
     </tr>
     @endforeach
